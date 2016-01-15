@@ -1,4 +1,4 @@
-class Groceries
+class GroceryList
 
 #Initialize is called when the new method is used
 #to create a new instance of the class.
@@ -58,8 +58,7 @@ end
 end
 
   def action_loop
-    add_item = nil
-    until add_item == "n"
+    while true
       print_list
       puts "Add Item? (y/n)"
       add_item = gets.chomp.to_s
@@ -68,5 +67,5 @@ end
   end
 end
 
-groceries = Groceries.new
-groceries.action_loop
+# groceries = GroceryList.new
+# groceries.action_loop
