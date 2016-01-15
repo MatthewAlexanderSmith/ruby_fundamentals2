@@ -10,10 +10,13 @@ end
       puts "What did you forget?"
       item = gets.chomp.to_s
       @grocery_list.push(item)
-    elsif add_item
+      list_length = @grocery_list.length
+      puts "Your grocery now has #{list_length} items"
     else
-
       puts "Bon Appetit!"
+      list_length = @grocery_list.length
+      puts "Your grocery list has #{list_length} items"
+
       exit
     end
   end
