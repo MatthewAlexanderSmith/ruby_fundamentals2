@@ -36,6 +36,7 @@ end
     else
       puts "You need to pick up bananas!"
     end
+    puts "The second item in the list is #{@grocery_list[1]}"
 
   end
 
