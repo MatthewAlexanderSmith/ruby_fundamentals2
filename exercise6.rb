@@ -1,5 +1,8 @@
 class Groceries
 
+#Initialize is called when the new method is used
+#to create a new instance of the class.
+
 def initialize
   @grocery_list = ["carrots", "Toilet paper", "apples", "salmon"]
 end
@@ -11,7 +14,7 @@ end
       item = gets.chomp.to_s
       @grocery_list.push(item)
       list_length = @grocery_list.length
-      puts "Your grocery now has #{list_length} items"
+      puts "Your grocery list now has #{list_length} items"
     else
       puts "Bon Appetit!"
       list_length = @grocery_list.length
@@ -23,9 +26,17 @@ end
 
   def print_list
     puts ""
+
     @grocery_list.each do |item|
       puts "*#{item}"
     end
+
+    if @grocery_list.include? 'bananas'
+      puts "You don't need to pick up bananas"
+    else
+      puts "You need to pick up bananas!"
+    end
+
   end
 
   def action_loop
