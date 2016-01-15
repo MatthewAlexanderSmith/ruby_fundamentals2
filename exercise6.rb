@@ -8,7 +8,6 @@ def initialize
 end
 
   def add (add_item)
-
     if add_item == "y"
       puts "What did you forget?"
       item = gets.chomp.to_s
@@ -19,7 +18,6 @@ end
       puts "Bon Appetit!"
       list_length = @grocery_list.length
       puts "Your grocery list has #{list_length} items"
-
       exit
     end
   end
@@ -39,6 +37,14 @@ end
     end
     puts ""
 
+
+    puts "There wasn't any salmon!"
+    puts "Here is the list without salmon"
+    @grocery_list.delete('salmon')
+    @grocery_list.each do |item|
+      puts "*#{item}"
+    end
+
     if @grocery_list.include? 'bananas'
       puts "You don't need to pick up bananas"
       puts ""
@@ -49,7 +55,7 @@ end
     puts "The second item in the list is #{@grocery_list[1]}"
     puts ""
 
-  end
+end
 
   def action_loop
     add_item = nil
