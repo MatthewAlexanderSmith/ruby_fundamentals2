@@ -4,7 +4,7 @@ class Groceries
 #to create a new instance of the class.
 
 def initialize
-  @grocery_list = ["carrots", "Toilet paper", "apples", "salmon"]
+  @grocery_list = ["carrots", "toilet paper", "apples", "salmon"]
 end
 
   def add (add_item)
@@ -30,13 +30,24 @@ end
     @grocery_list.each do |item|
       puts "*#{item}"
     end
+    puts ""
+
+    puts "Alphabetically sorted grocery list:"
+    @grocery_list = @grocery_list.sort
+    @grocery_list.each do |item|
+      puts "*#{item}"
+    end
+    puts ""
 
     if @grocery_list.include? 'bananas'
       puts "You don't need to pick up bananas"
+      puts ""
     else
       puts "You need to pick up bananas!"
+      puts ""
     end
     puts "The second item in the list is #{@grocery_list[1]}"
+    puts ""
 
   end
 
